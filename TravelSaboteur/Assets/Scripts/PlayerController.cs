@@ -1,23 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     public float speed = 10f;
-    // Start is called before the first frame update
-    void Start()
+
+    private Vector3 movementDirection = Vector3.zero;
+    private Rigidbody rb;
+
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 movement = Vector3.right * Input.GetAxis("Horizontal") + Vector3.forward * Input.GetAxis("Vertical");
-        Rigidbody rb = GetComponent<Rigidbody>();
+        movementDirection = Vector3.right * Input.GetAxisRaw("Horizontal") + Vector3.forward * Input.GetAxisRaw("Vertical");
+    }
+    void OnDrawGizmos()
+    {
+        if (rb != null)
+        {
+            Gizmos.color = new Color(1, 0, 0, 0.5f);
+            Gizmos.DrawLine(transform.position, transform.position + rb.velocity);
+        }
+    }
 
-        rb.AddForce(movement * speed);
+    void FixedUpdate()
+    {
+        rb.velocity = movementDirection.normalized * speed;
     }
 }
