@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,7 +53,7 @@ public class SabotageConsole : MonoBehaviour
                 console.sabotageValue += 1f;
             }
 
-            sabotageValue = 1f;
+            sabotageValue = 0f;
         }
 
 
@@ -65,6 +66,8 @@ public class SabotageConsole : MonoBehaviour
         {
             highlight.intensity = Math.Max(highlight.intensity - Time.deltaTime * fadeSpeed, 0f);
         }
+
+        GetComponentInChildren<TextMeshPro>().text = sabotageValue.ToString();
     }
 
     void OnTriggerEnter(Collider other)
