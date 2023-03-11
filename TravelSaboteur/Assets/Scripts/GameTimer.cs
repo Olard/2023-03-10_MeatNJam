@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
@@ -19,5 +20,10 @@ public class GameTimer : MonoBehaviour
     void Update()
     {
         slider.value += Time.deltaTime;
+
+        if (slider.value >= slider.maxValue)
+        {
+            SceneManager.LoadScene("Lose");
+        }
     }
 }
