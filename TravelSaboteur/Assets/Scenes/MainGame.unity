@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3158,6 +3158,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 2045128224}
+    - target: {fileID: 1856947333179208068, guid: 37137b65ec559df47ae3706d572da775, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 2792712493089571549, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_Name
       value: Robot Guard
@@ -3168,7 +3172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.6467447
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3176,23 +3180,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.341642
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3200,7 +3204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4195985242512525205, guid: 37137b65ec559df47ae3706d572da775, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3978,7 +3982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c767082eb3dfe54fb3db9a709ff40eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
 --- !u!54 &1051315163
 Rigidbody:
   m_ObjectHideFlags: 0
