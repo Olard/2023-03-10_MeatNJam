@@ -8,15 +8,12 @@ public class GameTimer : MonoBehaviour
 {
     private Slider slider;
 
-
-    // Start is called before the first frame update
     void Awake()
     {
         slider = GetComponent<Slider>();
         slider.value = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         slider.value += Time.deltaTime;
