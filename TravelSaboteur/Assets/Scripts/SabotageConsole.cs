@@ -11,6 +11,9 @@ public class SabotageConsole : MonoBehaviour
     [SerializeField]
     public float fadeSpeed = 0.5f;
 
+    [SerializeField]
+    public float sabotageValue = 1f;
+
     private SabotageSlider sabotageSlider;
     private Boolean sabotaged = false;
     private Boolean playerIsInRange = false;
@@ -25,6 +28,7 @@ public class SabotageConsole : MonoBehaviour
 
     void Awake()
     {
+        sabotageValue = 1f;
         sabotageSlider = GameObject.FindAnyObjectByType<SabotageSlider>();
         if (sabotageSlider == null)
         {
@@ -40,8 +44,15 @@ public class SabotageConsole : MonoBehaviour
         if (!sabotaged && playerIsInRange && Input.GetButtonDown("Submit"))
         {
             sabotaged = true;
-            sabotageSlider.PerformSabotage(this);
+            sabotageSlider.PerformSabotage(this, sabotageValue);
             highlight.color = Color.red;
+
+            foreach(SabotageConsole console in GameObject.FindObjectsOfType<SabotageConsole>())
+            {
+                console.sabotageValue += 1f;
+            }
+
+            sabotageValue = 1f;
         }
 
 

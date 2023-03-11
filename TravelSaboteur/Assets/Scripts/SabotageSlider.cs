@@ -15,9 +15,9 @@ public class SabotageSlider : MonoBehaviour
         slider.value = 0f;
     }
 
-    public void PerformSabotage(SabotageConsole trigger)
+    public void PerformSabotage(SabotageConsole trigger, float value)
     {
-        slider.value += 1f;
+        slider.value += value;
 
         if (slider.value >= slider.maxValue)
         {
