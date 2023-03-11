@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4195985242512525205}
   - component: {fileID: 1525909775885176410}
   - component: {fileID: 3387951880616334602}
+  - component: {fileID: 3550160212258247832}
   m_Layer: 0
   m_Name: Robot Guard
   m_TagString: Untagged
@@ -147,6 +148,12 @@ MonoBehaviour:
   currentWaypointIndex: 0
   speed: 8
   waitTimeAtWaypoint: 1.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  levelLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!54 &3387951880616334602
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -174,6 +181,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!136 &3550160212258247832
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2792712493089571549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Height: 12
+  m_Direction: 2
+  m_Center: {x: 0, y: 1, z: 6}
 --- !u!1 &5484747409507582908
 GameObject:
   m_ObjectHideFlags: 0
