@@ -54,7 +54,10 @@ public class Robot : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawLine(transform.position, waypoints[currentWaypointIndex].transform.position);
+        if (currentWaypointIndex < waypoints.Length && waypoints[currentWaypointIndex] != null)
+        {
+            Gizmos.color = new Color(1, 0, 0, 0.5f);
+            Gizmos.DrawLine(transform.position, waypoints[currentWaypointIndex].transform.position);
+        }
     }
 }
