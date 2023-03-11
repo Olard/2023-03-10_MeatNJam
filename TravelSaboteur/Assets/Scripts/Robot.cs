@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -17,29 +18,56 @@ public class Robot : MonoBehaviour
     public LayerMask playerLayer;
     [SerializeField]
     public LayerMask levelLayer;
+    [SerializeField]
+    public Light spotlight;
+    [SerializeField]
+    public float waitAfterHack = 1f;
 
+    public float hackedCountdown = 0;
+    public float wakeupAfterHackCountdown = 0;
+    public float waitCountdown = 0;
 
     private Vector3 movementDirection = Vector3.zero;
     private Rigidbody rb;
-    private float waitCountdown = 0;
+    private Coroutine flickerCoroutine;
+    private float spotlightIntensity;
+
+    void Start()
+    {
+        spotlightIntensity = spotlight.intensity;
+    }
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
+        if (hackedCountdown > 0 )
+        {
+            hackedCountdown -= Time.deltaTime;
+            if (flickerCoroutine == null)
+            {
+                flickerCoroutine = StartCoroutine(FlickerLight());
+            }
+            return;
+        } else if (flickerCoroutine != null)
+        {
+            StopCoroutine(flickerCoroutine);
+            flickerCoroutine = null;
+            spotlight.intensity = spotlightIntensity;
+            wakeupAfterHackCountdown = waitAfterHack;
+        }
         if (waitCountdown > 0)
         {
             waitCountdown -= Time.deltaTime;
+            return;
+        }
+        if (wakeupAfterHackCountdown > 0)
+        {
+            wakeupAfterHackCountdown -= Time.deltaTime;
             return;
         }
 
@@ -69,6 +97,12 @@ public class Robot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (hackedCountdown > 0)
+        {
+            return;
+            // todo this causes the player not to be seen on wakeup if he's already entered the collider, let's call this a feature
+        }
+
         // if player is in collider
         if (other.GetComponentInParent<PlayerController>() != null)
         {
@@ -94,4 +128,21 @@ public class Robot : MonoBehaviour
             }
         }
     }
+
+    internal void setHacked(float hackDuration)
+    {
+        hackedCountdown = Mathf.Max(0f, hackedCountdown) + hackDuration;
+    }
+
+    IEnumerator FlickerLight()
+    {
+        while (true)
+        {
+            float flicker = UnityEngine.Random.Range(0.5f, 1.0f);
+            spotlight.intensity = flicker;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+
 }

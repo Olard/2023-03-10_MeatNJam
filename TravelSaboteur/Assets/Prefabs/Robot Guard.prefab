@@ -154,6 +154,9 @@ MonoBehaviour:
   levelLayer:
     serializedVersion: 2
     m_Bits: 8
+  spotlight: {fileID: 3941367267121384330}
+  hackedCountdown: 0
+  waitCountdown: 0
 --- !u!54 &3387951880616334602
 Rigidbody:
   m_ObjectHideFlags: 0
