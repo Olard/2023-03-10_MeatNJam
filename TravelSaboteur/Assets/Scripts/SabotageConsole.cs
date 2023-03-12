@@ -42,7 +42,7 @@ public class SabotageConsole : MonoBehaviour
 
     void Update()
     {
-        if (!sabotaged && playerIsInRange && Input.GetButtonDown("Submit"))
+        if (!sabotaged && playerIsInRange)
         {
             sabotaged = true;
             sabotageSlider.PerformSabotage(this, sabotageValue);
