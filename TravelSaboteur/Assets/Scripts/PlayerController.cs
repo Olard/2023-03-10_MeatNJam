@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float speed = 10f;
 
+    [SerializeField]
+    public float sabotageMultiplier = 10f;
+
     private Vector3 movementDirection = Vector3.zero;
     private Rigidbody rb;
 

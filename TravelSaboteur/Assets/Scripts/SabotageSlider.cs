@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class SabotageSlider : MonoBehaviour
 {
+    [SerializeField]
+    public PlayerController playerController;
+
     private Slider slider;
     private SabotageConsole lastTrigger;
 
@@ -17,7 +20,7 @@ public class SabotageSlider : MonoBehaviour
 
     public void PerformSabotage(SabotageConsole trigger, float value)
     {
-        slider.value += value;
+        slider.value += value * playerController.sabotageMultiplier;
 
         if (slider.value >= slider.maxValue)
         {
