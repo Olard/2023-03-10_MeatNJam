@@ -9843,6 +9843,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 3872297457674185130, guid: a0bcbaae5873a6443b03e68f200f6633, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f4959e31eb2658f40baaa1c3da05a326, type: 2}
     - target: {fileID: 4153437063171922849, guid: a0bcbaae5873a6443b03e68f200f6633, type: 3}
       propertyPath: sabotageSlider
       value: 
