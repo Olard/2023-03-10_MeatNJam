@@ -497,6 +497,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1437896794}
     m_Modifications:
+    - target: {fileID: 173424411609095831, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b8aefb4091dff64eb14b60ded52c258, type: 2}
     - target: {fileID: 1421580749687405344, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -547,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Name
-      value: Wall (31)
+      value: Outer Wall(2)
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Layer
@@ -1020,6 +1024,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1437896794}
     m_Modifications:
+    - target: {fileID: 173424411609095831, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b8aefb4091dff64eb14b60ded52c258, type: 2}
     - target: {fileID: 1421580749687405344, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1070,7 +1078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Name
-      value: Wall (29)
+      value: Outer Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Layer
@@ -1339,6 +1347,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1437896794}
     m_Modifications:
+    - target: {fileID: 173424411609095831, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d457868ee3be01147acb7078db68e00b, type: 2}
     - target: {fileID: 1421580749687405344, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5379,6 +5391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1437896794}
     m_Modifications:
+    - target: {fileID: 173424411609095831, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b8aefb4091dff64eb14b60ded52c258, type: 2}
     - target: {fileID: 1421580749687405344, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5429,7 +5445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Name
-      value: Wall (30)
+      value: Outer Wall(4)
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Layer
@@ -6234,11 +6250,8 @@ Transform:
   - {fileID: 69745257}
   - {fileID: 1927827644}
   - {fileID: 85709994}
-  - {fileID: 1080192518}
   - {fileID: 653379066}
   - {fileID: 274919045}
-  - {fileID: 1916791660}
-  - {fileID: 1344723572}
   - {fileID: 1769643297}
   - {fileID: 2019104272}
   - {fileID: 155299672}
@@ -6263,8 +6276,11 @@ Transform:
   - {fileID: 1642249885}
   - {fileID: 561516756}
   - {fileID: 1243238412}
-  - {fileID: 1292610001}
   - {fileID: 576081892}
+  - {fileID: 1916791660}
+  - {fileID: 1344723572}
+  - {fileID: 1292610001}
+  - {fileID: 1080192518}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6416,6 +6432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1437896794}
     m_Modifications:
+    - target: {fileID: 173424411609095831, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d457868ee3be01147acb7078db68e00b, type: 2}
     - target: {fileID: 1421580749687405344, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -6736,7 +6756,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d4f68c506013fb489e9442d8caaf65d, type: 2}
+  - {fileID: 2100000, guid: ada7bfb7e9b4a8548939b72070944702, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8216,6 +8236,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1437896794}
     m_Modifications:
+    - target: {fileID: 173424411609095831, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b8aefb4091dff64eb14b60ded52c258, type: 2}
     - target: {fileID: 1421580749687405344, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8266,7 +8290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Name
-      value: Wall (32)
+      value: Outer Wall(3)
       objectReference: {fileID: 0}
     - target: {fileID: 2830957991623022474, guid: 86392701d39bd1e4393bc4aaca5f177a, type: 3}
       propertyPath: m_Layer
